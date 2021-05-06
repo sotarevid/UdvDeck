@@ -8,12 +8,13 @@ namespace UdvDeck.Shuffler
         private static readonly Random Random = new Random();
         public void Shuffle(Deck deck)
         {
-            for (var i = deck.Cards.Length - 1; i < 0; --i)
+            var n = deck.Length;
+            while (n > 1)
             {
-                var j = Random.Next(i + 1);
-                var tmp = deck[i];
-                deck[i] = deck[j];
-                deck[j] = tmp;
+                var k = Random.Next(n--);
+                var tmp = deck[n];
+                deck[n] = deck[k];
+                deck[k] = tmp;
             }
         }
     }
