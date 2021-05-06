@@ -6,6 +6,7 @@ namespace UdvDeck.DeckModel
     {
         public Card[] Cards { get; }
         public string Name { get; }
+        public int Length => Cards.Length;
 
         public Card this[int index]
         {
