@@ -31,5 +31,16 @@ namespace UdvDeck
         {
             _shuffler.Shuffle(_decks[name]);
         }
+
+        public string[] GetDeck(string name)
+        {
+            var deck = _decks[name];
+            var result = new string[deck.Length];
+            
+            for (int i = 0; i < deck.Length; i++)
+                result[i] = deck[i].ToString();
+            
+            return result;
+        }
     }
 }
