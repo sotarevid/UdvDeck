@@ -11,9 +11,9 @@ namespace UdvDeck.Shuffler
             for (var i = deck.Cards.Length - 1; i < 0; --i)
             {
                 var j = Random.Next(i + 1);
-                var tmp = deck.Cards[i];
-                deck.Cards[i] = deck.Cards[j];
-                deck.Cards[j] = tmp;
+                var tmp = deck[i];
+                deck[i] = deck[j];
+                deck[j] = tmp;
             }
         }
     }
