@@ -10,6 +10,8 @@ namespace UdvDeck
         private Dictionary<string, Deck> _decks = new Dictionary<string, Deck>();
         private IDeckShuffler _shuffler = new FisherYatesShuffler();
         
+        public bool ContainsName(string name) => _decks.ContainsKey(name);
+        
         public void CreateDeck(string name)
         {
             if (!_decks.ContainsKey(name))
